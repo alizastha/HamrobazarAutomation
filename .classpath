@@ -2,10 +2,10 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="E:/officework/lib/exceldataprovider.jar"/>
-	<classpathentry kind="lib" path="E:/officework/lib/excelreader_selenium-v3.1.jar"/>
-	<classpathentry kind="lib" path="E:/officework/lib/selenium-chrome-driver-3.7.1.jar"/>
-	<classpathentry kind="lib" path="E:/officework/lib/selenium-server-standalone-3.11.0.jar"/>
-	<classpathentry kind="lib" path="E:/officework/lib/testng-6.11.jar"/>
+	<classpathentry kind="lib" path="F:/git/HamrobazarAutomation/lib/exceldataprovider.jar"/>
+	<classpathentry kind="lib" path="F:/git/HamrobazarAutomation/lib/excelreader_selenium-v3.1.jar"/>
+	<classpathentry kind="lib" path="F:/git/HamrobazarAutomation/lib/selenium-chrome-driver-3.7.1.jar"/>
+	<classpathentry kind="lib" path="F:/git/HamrobazarAutomation/lib/selenium-server-standalone-3.7.1.jar"/>
+	<classpathentry kind="lib" path="F:/git/HamrobazarAutomation/lib/testng-6.11.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

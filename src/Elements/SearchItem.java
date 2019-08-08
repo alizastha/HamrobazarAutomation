@@ -23,7 +23,8 @@ public class SearchItem {
     @FindBy(xpath=".//option[text()[contains(.,'Price: Low to High')]]")
     WebElement SortAdsByoption;
     
-  
+    
+    
     
     public void SetSearchKeyword(String Keyword) {
     	Searchkeyword.sendKeys(Keyword);
@@ -34,5 +35,4 @@ public class SearchItem {
     public void LowToHighOption() {
     	SortAdsByoption.click();
     }
-    
 }

@@ -14,6 +14,8 @@ import org.testng.annotations.Test;
 import Elements.SearchItem;
 
 
+
+
 public class SearchItemTest {
 	@Test
 	public void SearchItemTesting() throws InterruptedException {
@@ -23,7 +25,6 @@ public class SearchItemTest {
 		chromedriver.get("https://hamrobazaar.com/");
 
 		SearchItem obj = new SearchItem(chromedriver);
-	
 
 		obj.SetSearchKeyword("laptop");
 		Thread.sleep(2000);
@@ -34,36 +35,36 @@ public class SearchItemTest {
 
 		
 		
-		int i = 6;
-		List<Integer> pricelist = new ArrayList<Integer>(); // array without predefine size
+	    int i = 6;
+	    List<Integer> pricelist = new ArrayList<Integer>(); // array without predefine size
 
-		WebElement pricetag = chromedriver.findElement(By.xpath(".//table[" + (i) + "]/tbody/tr[1]/td[5]/b"));
-		do {
+	    WebElement pricetag = chromedriver.findElement(By.xpath(".//table[" + (i) + "]/tbody/tr[1]/td[5]/b"));
+	    for(i=6; i<=25; i++)
+	    {
 
-			Pattern p = Pattern.compile("Rs. ?\\d+");
-			Matcher m = p.matcher(pricetag.getText());
-			 while (m.find()) {
-				 String s = m.group();
-			 System.out.println(s);
-			 }
-			String match = String.valueOf(m.group(0));
-			//System.out.println(s);
-			int price = Integer.parseInt(match);
-			pricelist.add(price);
-			i++;
-			pricetag = chromedriver.findElement(By.xpath(".//table[" + (i) + "]/tbody/tr[1]/td[5]/b"));
-		} while (pricetag != null);
-		if (pricelist.size() == 0)
-			System.out.println("No data");
+	        Pattern p = Pattern.compile("\\d+");
+	        Matcher m = p.matcher(pricetag.getText());
+	        String s = "";
+	        while (m.find()) {
+	            s = m.group();
+	            System.out.println(s);
+	        }
+	        int price = Integer.parseInt(s);
+	        pricelist.add(price);
+	        i++;
+	        pricetag = chromedriver.findElement(By.xpath(".//table[" + (i) + "]/tbody/tr[1]/td[5]/b"));
+	    } 
+	    if (pricelist.size() == 0)
+	        System.out.println("No data");
 
-		List<Integer> ascSorted = new ArrayList<Integer>();
+	    List<Integer> ascSorted = new ArrayList<Integer>();
 
-		ascSorted.addAll(pricelist);
-		Collections.sort(ascSorted);
-		if (ascSorted.equals(pricelist))
-			System.out.println("price are sorted in ascending order");
+	    ascSorted.addAll(pricelist);
+	    Collections.sort(ascSorted);
+	    if (ascSorted.equals(pricelist))
+	        System.out.println("price are sorted in ascending order");
 
-		chromedriver.quit();
+	    chromedriver.quit();
 
 	}
 }
